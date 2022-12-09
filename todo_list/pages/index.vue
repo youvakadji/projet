@@ -7,8 +7,7 @@
       <input 
         type="text" 
         v-model="newTask" 
-        placeholder="Add a new task" 
-        @keypress.enter="addTask" />
+        placeholder="Add a new task" />
       <button @click="addTask">Add</button>
     </div>
 
@@ -29,10 +28,9 @@ export default {
     }
   },
   mounted() {
-      localStorage.setItem('tasks', '[]')
+      localStorage.setItem('tasks', JSON.stringify([]))
   },
   
-
   methods: {
     addTask () {
       if (this.newTask) {
