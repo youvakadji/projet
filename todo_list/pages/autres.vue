@@ -47,9 +47,9 @@ export default {
 
     }
   },
-  mounted () {
-      this.todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-  },
+  // mounted () {
+  //     this.todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+  // },
   computed: {
     filteredTodos() {
         //all

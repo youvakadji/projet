@@ -29,13 +29,14 @@
           localStorage.setItem('todolist', parsed)
       },
     },
+
     mounted() {
       if (localStorage.getItem('todolist')) {
         var valuejson = JSON.parse(localStorage.getItem('todolist'))
-        this.value = valuejson[0].value
+        for (let i = 0; i < valuejson.length; i++) {
+          this.value = valuejson[i].value
+        }
       }
     },
-    
-    
   }
   </script>
