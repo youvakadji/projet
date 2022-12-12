@@ -27,9 +27,6 @@ export default {
       newTask: '',
     }
   },
-  mounted() {
-      localStorage.setItem('tasks', JSON.stringify([]))
-  },
   
   methods: {
     addTask () {

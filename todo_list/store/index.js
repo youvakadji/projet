@@ -1,4 +1,4 @@
-var local = JSON.parse(localStorage.getItem('tasks'))
+var local = JSON.parse(localStorage.getItem('tasks') || '[]')
 
 export const state = () => ({
 	tasks: local
