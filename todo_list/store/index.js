@@ -9,7 +9,6 @@ export const mutations = {
 		state.tasks = [{ content: task, done: false }, ...state.tasks];
 		const parsed = JSON.stringify(state.tasks);
 		localStorage.setItem('tasks', parsed);
-		
 	},
 
 	REMOVE_TASK(state, task) {
