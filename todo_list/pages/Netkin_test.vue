@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
     <div class="add">
       <button
         type="button"
@@ -35,8 +34,7 @@
           <button
             type="button"
             class="remove"
-            @click="remove(value)"
-            v-show="index != 0"
+            @click="remove()"
           >
             Remove
           </button>
@@ -48,49 +46,35 @@
 
 <script >
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
   data() {
     return {
       values: localStorage.getItem("task") ? JSON.parse(localStorage.getItem('task')): [] ,
-          title: '',
-          describe: '',
-          value3: '',
-
-      
+        title: '',
+        describe: '',
+        value3: '',   
     };
   },
   watch: {
-        values(newValue) {
-            var parsed = JSON.stringify(newValue)
-            localStorage.setItem("task", parsed)
-            newValue = JSON.parse(localStorage.getItem('task'))
-        }
-    },
+    values(newValue) {
+      var parsed = JSON.stringify(newValue)
+      localStorage.setItem("task", parsed)      
+    }
+  },
   
   methods: {
     addMore() {
       this.values.push({
         title: this.title,describe:this.describe,value3:this.value3,
       });
-      // localStorage.setItem('task', JSON.stringify(this.values));
-      // console.log(this.values);
     },
     remove(index) {
       this.values.splice(this.values.indexOf(index), 1);
-      // localStorage.setItem('task', JSON.stringify(this.values));
-      // console.log(this.values);
     },
-    
   },
-
-  
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 h3 {
   margin: 40px 0 0;
@@ -158,7 +142,7 @@ a {
   border: groove;
   padding: 5px;
   background-color: rgb(122, 6, 6);
-  margin-left: 800px;
+  margin-left: 700px;
   margin-bottom: 15px;
 }
 
