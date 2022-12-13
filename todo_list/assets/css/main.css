@@ -3,10 +3,10 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Fira sans', sans-serif;
+	background-color: #000;
 }
 
 body {
-	background-color: rgb(38, 35, 54);
 	color: #FFF;
 }
 
@@ -115,4 +115,18 @@ main .tasks .task button.delete {
 
 .tasks .task.is-complete .content {
 	text-decoration: line-through;
+}
+
+.div {
+	display: flex;
+	flex-direction: column;
+}
+
+span {
+	font-size: 10px;
+}
+
+.content {
+	font-size: 20px;
+	text-align: center;
 }

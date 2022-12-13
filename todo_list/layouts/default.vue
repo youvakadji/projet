@@ -62,7 +62,7 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
       temporary
@@ -78,13 +78,12 @@
           <v-list-item-title>Switch drawer (click me)</v-list-item-title>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
+    </v-navigation-drawer> -->
+    <!-- <v-footer
       app
     >
       <span>&copy; {{ new Date() }}</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 

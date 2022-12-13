@@ -1,6 +1,10 @@
 <template>
     <div :class="`task ${task.done ? 'is-complete' : ''}`">
-        <div class="content">{{ task.content  }}</div>
+        <div class="div">
+            <span>&copy; {{ new Date() }}</span>
+            <div class="content">{{ task.content  }}</div>
+        </div>
+        
         <div class="buttons">
             <button @click="toggleDone">{{ task.done ? 'Undo' : 'Done' }}</button>
             <button @click="removeTask" class="delete">Delete</button>
